@@ -1,0 +1,122 @@
+body
+    padding: 0%
+    margin: 0%    
+    background-color: #ffffff62
+    
+.parent
+    display: grid
+    justify-content: start
+    grid-gap: 5px
+    height: 100vh
+    grid-template: auto / 300px 1fr
+    grid-template-areas: "menuChoeces content" "menuChoeces content"
+
+    .menuChoeces
+        background-color: #283237
+        grid-area: menuChoeces
+        //box-shadow: 5px 5px 8px 2px #919191
+        .calChoices
+            border: 2px solid #868686
+            border-right: 0px
+            border-left: 0px
+            .calChoicesH2
+                text-align: center
+                cursor: default
+                color: #c8cbcd
+            .studCalc,.mountingEyeCalc,.employeeTimesheet
+                margin: 10px 10px 5px 10px
+                width: 290px
+                height: 45px
+                text-align: left
+                text-indent: 50px
+                color: #c8cbcd
+                border: none
+                background: none  
+                background-repeat: no-repeat
+                background-position: 10px
+                background-size: 32px 32px  
+                font-family: Georgia, 'Times New Roman', Times, serif
+                font-size: 14px
+                font-weight: bold
+                cursor: pointer
+                transition: border .5s
+                transition: background-size .3s
+                transition-timing-function: linear
+                &:hover           
+                    background: #f5f5f5
+                    background-repeat: no-repeat
+                    background-position: 10px
+                    color: #000000
+                    background-size: 32px 32px
+                &:focus
+                    background: #f5f5f5
+                    background-repeat: no-repeat
+                    color: #000000
+                    background-position: 10px
+                    background-size: 40px 40px
+
+            .studCalc
+                background-image: url('../IMG/ICO/Stud_Calculator.ico')
+                &:hover
+                    background-image: url('../IMG/ICO/Stud_Calculator.ico')
+                &:focus
+                    background-image: url('../IMG/ICO/Stud_Calculator.ico')
+
+            .mountingEyeCalc
+                background-image: url('../IMG/ICO/Calculation_Eyelets.ico')
+                &:hover
+                    background-image: url('../IMG/ICO/Calculation_Eyelets.ico')
+                &:focus
+                    background-image: url('../IMG/ICO/Calculation_Eyelets.ico')
+
+        .employeeTimesheet
+                margin: 10px 10px 0px 10px
+                width: 290px
+                height: 45px
+                color: #c8cbcd
+                border: none
+                background: none  
+                text-align: left
+                text-indent: 50px
+                background-repeat: no-repeat
+                background-position: 10px
+                background-size: 32px 32px  
+                font-family: Georgia, 'Times New Roman', Times, serif
+                font-size: 14px
+                font-weight: bold
+                cursor: pointer
+                transition: border .5s
+                transition: background-size .3s
+                transition-timing-function: linear
+                &:hover           
+                    background: #f5f5f5
+                    background-repeat: no-repeat
+                    background-position: 10px
+                    color: #000000
+                    background-size: 32px 32px
+                &:focus
+                    background: #f5f5f5
+                    background-repeat: no-repeat
+                    color: #000000
+                    background-position: 10px
+                    background-size: 40px 40px
+
+        .employeeTimesheet
+            background-image: url('../IMG/ICO/Time_machine.ico')
+            &:hover
+                background-image: url('../IMG/ICO/Time_machine.ico')
+            &:focus
+                background-image: url('../IMG/ICO/Time_machine.ico')
+
+        .assistantDesignerH2
+            margin: 50px 5px 50px 5px
+            padding: 10px
+            text-align: center
+            color: #c8cbcd
+            background: linear-gradient(45deg, #566b75, #283237, #566b75)
+            cursor: default
+            box-shadow: 5px 5px 8px 1px #888888b2
+
+    .content
+        grid-area: content
+        background-color: #f5f5f5    

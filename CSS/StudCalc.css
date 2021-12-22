@@ -1,0 +1,39 @@
+.mainStudCalc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  margin: 5px 0px 0px 5px;
+}
+.mainStudCalc .standardFlanges {
+  width: 600px;
+  display: grid;
+  grid-template: repeat(6, 1fr)/repeat(2, 1fr);
+  background-color: #888888b2;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px 1px #dadadab2;
+  grid-template-areas: "h3 h3";
+}
+.mainStudCalc .standardFlanges h3 {
+  grid-area: h3;
+  color: #fff;
+  height: 30px;
+  margin: 0%;
+  box-shadow: 5px 5px 8px 1px #dadadab2;
+  text-align: center;
+  padding: 10px 0px 0px 10px;
+  background: linear-gradient(45deg, #566b75, #283237, #566b75);
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.mainStudCalc .standardFlanges h4 {
+  margin: 5px;
+  cursor: default;
+  color: #fff;
+  padding: 7px;
+}
+.mainStudCalc .standardFlanges select {
+  height: 30px;
+  margin: 5px;
+  border-radius: 10px;
+}/*# sourceMappingURL=StudCalc.css.map */

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/MainMenu.css">
+    <link rel="stylesheet" href="../CSS/StudCalc.css">
+    <link rel="icon" href="../IMG/ICO/designer-avatar_114349.ico">
+    <title>AssistantDesigner</title>
+</head>
+<body>
+    <div class="parent">
+        <nav class="menuChoeces">
+            <h2 class="assistantDesignerH2">Помощник конструктора</h2>
+            <div class="calChoices">
+                <h2 class="calChoicesH2">Выберите калькулятор</h2>
+                <input class="studCalc" type="button" value="Шпилек">
+                <input class="mountingEyeCalc" type="button" value="Монтажных проушин">
+            </div>
+            <input class="employeeTimesheet" type="button" value="Табель рабочего времени" >
+        </nav>
+        <div class="content">
+            <main class="mainStudCalc">
+                <div class="standardFlanges">
+                    <h3>Выбор стандартых фланцев</h3>
+                    <h4 class="choiceGOSTh4">Выберите ГОСТ фланцев</h4>
+                    <select name="choiceGOSTname" id="" class="choiceGOST"></select>
+
+                    <h4 class="choiceGOST33259h4">Выберите тип для ГОСТ33259-2015</h4>
+                    <select name="choiceGOST33259name" id="" class="choiceGOST33259"></select>
+                    
+                    <h4 class="choicePNh4">Выберите давление</h4>
+                    <select name="choicePNname" id="" class="choicePN"></select>
+                    
+                    <h4 class="choiceExecutionh4">Выберите исполнение</h4>
+                    <select name="choiceExecutionname" id="" class="choiceExecution"></select>
+                   
+                    <h4 class="choiceDNh4">Выберите DN</h4>
+                    <select name="choiceDNname" id="" class="choiceDN"></select>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
