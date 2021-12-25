@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../CSS/MainMenu.css">
     <link rel="stylesheet" href="../CSS/StudCalc.css">
     <link rel="icon" href="../IMG/ICO/designer-avatar_114349.ico">
+    <script src="../JS/StudCalc.js"></script>
     <title>AssistantDesigner</title>
 </head>
 <body>
@@ -15,7 +16,8 @@
             <h2 class="assistantDesignerH2">Помощник конструктора</h2>
             <div class="calChoices">
                 <h2 class="calChoicesH2">Выберите калькулятор</h2>
-                <input class="studCalc" type="button" value="Шпилек">
+                <input Id="studCalc" type="radio" value="Шпилек">
+                <label for="studCalc" >Шпилек</label>
                 <input class="mountingEyeCalc" type="button" value="Монтажных проушин">
             </div>
             <input class="employeeTimesheet" type="button" value="Табель рабочего времени" >
@@ -38,6 +40,22 @@
                    
                     <h4 class="choiceDNh4">Выберите DN</h4>
                     <select name="choiceDNname" id="" class="choiceDN"></select>
+                </div>
+                <div class="notStandartFl">
+                    <h3>Выбор нестандартных фланцев</h3>
+
+                    <input onclick="checkedNotStFl()" type="checkbox" id="NotStFlInId">
+                    <label id="NotStFlLbId" for="NotStFlInId">Нестандартные фланцы</label>
+
+                    <input disabled id="textNotStFlId" type="text" placeholder="Размеры в мм.">
+
+                    <input onclick="checkedNotStFl2()" id="NotStFl2InId" type="checkbox">
+                    <label id="NotStFl2LbId" for="NotStFl2InId">Если разные тарелки</label>
+
+                    <div class="textNotStFlCl">
+                        <input disabled id="textNotStFlId2" type="text" placeholder="Размеры в мм.">
+                        <input disabled id="textNotStFlId21" type="text" placeholder="Размеры в мм.">
+                    </div>                    
                 </div>
             </main>
         </div>

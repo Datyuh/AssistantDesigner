@@ -1,3 +1,36 @@
+@mixin buttonStyle()
+    margin: 10px 10px 5px 10px
+    width: 290px
+    height: 45px
+    text-align: left
+    text-indent: 50px
+    color: #c8cbcd
+    border: none
+    background: none  
+    background-repeat: no-repeat
+    background-position: 10px
+    background-size: 32px 32px  
+    font-family: Georgia, 'Times New Roman', Times, serif
+    font-size: 14px
+    font-weight: bold
+    cursor: pointer
+    transition: border .5s
+    transition: background-size .3s
+    transition-timing-function: linear
+
+@mixin buttonStyleHover()
+    background: #f5f5f5
+    background-repeat: no-repeat
+    background-position: 10px
+    color: #000000
+    background-size: 32px 32px
+@mixin buttonStyleFocus()
+    background: #f5f5f5
+    background-repeat: no-repeat
+    color: #000000
+    background-position: 10px
+    background-size: 40px 40px
+    
 body
     padding: 0%
     margin: 0%    
@@ -19,44 +52,29 @@ body
             border: 2px solid #868686
             border-right: 0px
             border-left: 0px
+            label               
+                font-family: Georgia, 'Times New Roman', Times, serif
+                font-size: 30px
+                color: #c8cbcd
+                &:hover 
+                    border-bottom: 2px solid #000
             .calChoicesH2
                 text-align: center
                 cursor: default
                 color: #c8cbcd
-            .studCalc,.mountingEyeCalc,.employeeTimesheet
-                margin: 10px 10px 5px 10px
-                width: 290px
-                height: 45px
-                text-align: left
-                text-indent: 50px
-                color: #c8cbcd
-                border: none
-                background: none  
-                background-repeat: no-repeat
-                background-position: 10px
-                background-size: 32px 32px  
-                font-family: Georgia, 'Times New Roman', Times, serif
-                font-size: 14px
-                font-weight: bold
-                cursor: pointer
-                transition: border .5s
-                transition: background-size .3s
-                transition-timing-function: linear
+            .mountingEyeCalc,.employeeTimesheet                
+                @include buttonStyle()
                 &:hover           
-                    background: #f5f5f5
-                    background-repeat: no-repeat
-                    background-position: 10px
-                    color: #000000
-                    background-size: 32px 32px
+                    @include buttonStyleHover()
                 &:focus
-                    background: #f5f5f5
-                    background-repeat: no-repeat
-                    color: #000000
-                    background-position: 10px
-                    background-size: 40px 40px
+                    @include buttonStyleFocus()
 
-            .studCalc
+            #studCalc
+                display: none
                 background-image: url('../IMG/ICO/Stud_Calculator.ico')
+                &:checked + label
+                    border-bottom: 2px solid #3498db
+                    cursor: default
                 &:hover
                     background-image: url('../IMG/ICO/Stud_Calculator.ico')
                 &:focus
@@ -70,37 +88,13 @@ body
                     background-image: url('../IMG/ICO/Calculation_Eyelets.ico')
 
         .employeeTimesheet
-                margin: 10px 10px 0px 10px
-                width: 290px
-                height: 45px
-                color: #c8cbcd
-                border: none
-                background: none  
-                text-align: left
-                text-indent: 50px
-                background-repeat: no-repeat
-                background-position: 10px
-                background-size: 32px 32px  
-                font-family: Georgia, 'Times New Roman', Times, serif
-                font-size: 14px
-                font-weight: bold
-                cursor: pointer
-                transition: border .5s
-                transition: background-size .3s
-                transition-timing-function: linear
+                @include buttonStyle()                
                 &:hover           
-                    background: #f5f5f5
-                    background-repeat: no-repeat
-                    background-position: 10px
-                    color: #000000
-                    background-size: 32px 32px
+                    @include buttonStyleHover()
                 &:focus
-                    background: #f5f5f5
-                    background-repeat: no-repeat
-                    color: #000000
-                    background-position: 10px
-                    background-size: 40px 40px
-
+                    @include buttonStyleFocus()
+                        
+                    
         .employeeTimesheet
             background-image: url('../IMG/ICO/Time_machine.ico')
             &:hover

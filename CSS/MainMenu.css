@@ -21,12 +21,20 @@ body {
   border-right: 0px;
   border-left: 0px;
 }
+.parent .menuChoeces .calChoices label {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  color: #c8cbcd;
+}
+.parent .menuChoeces .calChoices label:hover {
+  border-bottom: 2px solid #000;
+}
 .parent .menuChoeces .calChoices .calChoicesH2 {
   text-align: center;
   cursor: default;
   color: #c8cbcd;
 }
-.parent .menuChoeces .calChoices .studCalc, .parent .menuChoeces .calChoices .mountingEyeCalc, .parent .menuChoeces .calChoices .employeeTimesheet {
+.parent .menuChoeces .calChoices .mountingEyeCalc, .parent .menuChoeces .calChoices .employeeTimesheet {
   margin: 10px 10px 5px 10px;
   width: 290px;
   height: 45px;
@@ -46,27 +54,32 @@ body {
   transition: background-size 0.3s;
   transition-timing-function: linear;
 }
-.parent .menuChoeces .calChoices .studCalc:hover, .parent .menuChoeces .calChoices .mountingEyeCalc:hover, .parent .menuChoeces .calChoices .employeeTimesheet:hover {
+.parent .menuChoeces .calChoices .mountingEyeCalc:hover, .parent .menuChoeces .calChoices .employeeTimesheet:hover {
   background: #f5f5f5;
   background-repeat: no-repeat;
   background-position: 10px;
   color: #000000;
   background-size: 32px 32px;
 }
-.parent .menuChoeces .calChoices .studCalc:focus, .parent .menuChoeces .calChoices .mountingEyeCalc:focus, .parent .menuChoeces .calChoices .employeeTimesheet:focus {
+.parent .menuChoeces .calChoices .mountingEyeCalc:focus, .parent .menuChoeces .calChoices .employeeTimesheet:focus {
   background: #f5f5f5;
   background-repeat: no-repeat;
   color: #000000;
   background-position: 10px;
   background-size: 40px 40px;
 }
-.parent .menuChoeces .calChoices .studCalc {
+.parent .menuChoeces .calChoices #studCalc {
+  display: none;
   background-image: url("../IMG/ICO/Stud_Calculator.ico");
 }
-.parent .menuChoeces .calChoices .studCalc:hover {
+.parent .menuChoeces .calChoices #studCalc:checked + label {
+  border-bottom: 2px solid #3498db;
+  cursor: default;
+}
+.parent .menuChoeces .calChoices #studCalc:hover {
   background-image: url("../IMG/ICO/Stud_Calculator.ico");
 }
-.parent .menuChoeces .calChoices .studCalc:focus {
+.parent .menuChoeces .calChoices #studCalc:focus {
   background-image: url("../IMG/ICO/Stud_Calculator.ico");
 }
 .parent .menuChoeces .calChoices .mountingEyeCalc {
@@ -79,14 +92,14 @@ body {
   background-image: url("../IMG/ICO/Calculation_Eyelets.ico");
 }
 .parent .menuChoeces .employeeTimesheet {
-  margin: 10px 10px 0px 10px;
+  margin: 10px 10px 5px 10px;
   width: 290px;
   height: 45px;
+  text-align: left;
+  text-indent: 50px;
   color: #c8cbcd;
   border: none;
   background: none;
-  text-align: left;
-  text-indent: 50px;
   background-repeat: no-repeat;
   background-position: 10px;
   background-size: 32px 32px;
